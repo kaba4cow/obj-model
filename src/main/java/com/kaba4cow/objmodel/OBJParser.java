@@ -51,7 +51,7 @@ public class OBJParser {
 			if (parts.length > 1)
 				switch (parts[0]) {
 					case "#":
-						target.addComment(new OBJComment().setText(parts[1]));
+						target.addComment(new OBJComment().setText(line.split("\\s+", 2)[1]));
 						break;
 					case "o":
 						if (Objects.nonNull(object))
