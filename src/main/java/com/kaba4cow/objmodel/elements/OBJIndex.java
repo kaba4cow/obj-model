@@ -61,7 +61,7 @@ public class OBJIndex implements OBJElement {
 	 * @return {@code true} if the vertex index is set, {@code false} otherwise
 	 */
 	public boolean hasVertex() {
-		return Objects.nonNull(texture);
+		return Objects.nonNull(vertex);
 	}
 
 	/**

@@ -31,11 +31,23 @@ Reader reader = new InputStreamReader(new FileInputStream("path/to/your/file.obj
 OBJModel model = new OBJModel(reader);
 ```
 
+or
+
+```java
+Reader source = new InputStreamReader(new FileInputStream("path/to/your/file.obj"));
+OBJModel model = OBJParser.parse(source, null);
+```
+
 ### Parsing an OBJ from a string
 
 ```java
-String source = "the OBJ data";
-OBJModel model = new OBJModel(source);
+OBJModel model = new OBJModel("the OBJ data");
+```
+
+or
+
+```java
+OBJModel model = OBJParser.parse("the OBJ data", null);
 ```
 
 ### Converting to OBJ data
