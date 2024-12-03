@@ -89,6 +89,15 @@ public class OBJFace implements OBJElement {
 	}
 
 	/**
+	 * Returns the number of indices in the object.
+	 * 
+	 * @return number of indices
+	 */
+	public int getIndexCount() {
+		return indices.size();
+	}
+
+	/**
 	 * Converts the face to its OBJ string representation.
 	 *
 	 * @return the OBJ string representation of this face

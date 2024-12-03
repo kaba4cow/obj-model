@@ -117,6 +117,15 @@ public class OBJObject implements OBJElement {
 	}
 
 	/**
+	 * Returns the number of vertices in the object.
+	 * 
+	 * @return number of vertices
+	 */
+	public int getVertexCount() {
+		return vertices.size();
+	}
+
+	/**
 	 * Retrieves an unmodifiable list of textures.
 	 *
 	 * @return an unmodifiable list of {@link OBJTexture} objects
@@ -180,6 +189,15 @@ public class OBJObject implements OBJElement {
 	public OBJObject clearTextures() {
 		textures.clear();
 		return this;
+	}
+
+	/**
+	 * Returns the number of textures in the object.
+	 * 
+	 * @return number of textures
+	 */
+	public int getTextureCount() {
+		return textures.size();
 	}
 
 	/**
@@ -249,6 +267,15 @@ public class OBJObject implements OBJElement {
 	}
 
 	/**
+	 * Returns the number of normals in the object.
+	 * 
+	 * @return number of normals
+	 */
+	public int getNormalCount() {
+		return normals.size();
+	}
+
+	/**
 	 * Retrieves an unmodifiable list of faces.
 	 *
 	 * @return an unmodifiable list of {@link OBJFace} objects
@@ -312,6 +339,15 @@ public class OBJObject implements OBJElement {
 	public OBJObject clearFaces() {
 		faces.clear();
 		return this;
+	}
+
+	/**
+	 * Returns the number of faces in the object.
+	 * 
+	 * @return number of faces
+	 */
+	public int getFaceCount() {
+		return faces.size();
 	}
 
 	/**
