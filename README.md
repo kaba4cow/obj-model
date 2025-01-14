@@ -24,31 +24,19 @@ Other features such as materials, object groups, curves, advanced object propert
 
 ## Usage
 
-### Parsing an OBJ from a file/reader
+### Parsing an OBJ
 
 ```java
-Reader reader = new InputStreamReader(new FileInputStream("path/to/your/file.obj"));
-OBJModel model = new OBJModel(reader);
+OBJModel model = new OBJModel(source);
 ```
 
 or
 
 ```java
-Reader source = new InputStreamReader(new FileInputStream("path/to/your/file.obj"));
 OBJModel model = OBJParser.parse(source, null);
 ```
 
-### Parsing an OBJ from a string
-
-```java
-OBJModel model = new OBJModel("the OBJ data");
-```
-
-or
-
-```java
-OBJModel model = OBJParser.parse("the OBJ data", null);
-```
+The `source` can be either a `Reader`, an `InputStream` or a `String`.
 
 ### Converting to OBJ data
 

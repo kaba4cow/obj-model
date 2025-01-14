@@ -4,10 +4,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.kaba4cow</groupId>
 	<artifactId>obj-model</artifactId>
-	<version>0.2.2</version>
+	<version>0.2.3</version>
 	<name>OBJ Model</name>
-	<description>A lightweight Java library for parsing and manipulating OBJ
-		(Wavefront) model files</description>
+	<description>A lightweight Java library for parsing and manipulating OBJ (Wavefront) model files</description>
 	<packaging>jar</packaging>
 	<properties>
 		<maven.compiler.source>8</maven.compiler.source>

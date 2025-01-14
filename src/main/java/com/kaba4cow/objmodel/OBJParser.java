@@ -2,6 +2,8 @@ package com.kaba4cow.objmodel;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.StringReader;
 import java.util.Objects;
@@ -106,6 +108,23 @@ public class OBJParser {
 			target.addObject(object);
 		reader.close();
 		return target;
+	}
+
+	/**
+	 * Reads the OBJ data from the specified {@link InputStream} and converts its contents to an {@link OBJModel} object. If the
+	 * {@code target} is not {@code null} its contents are cleared using {@link OBJModel#clearComments()} and
+	 * {@link OBJModel#clearObjects()}
+	 * 
+	 * @param source the {@link InputStream} to read the OBJ data from
+	 * @param target the {@link OBJModel} to convert the OBJ data to, or {@code null}
+	 * 
+	 * @return the {@link OBJModel} containing the data, either the passed one or a newly created one if {@code target} is
+	 *             {@code null}
+	 * 
+	 * @throws IOException if an I/O error occurs
+	 */
+	public static OBJModel parse(InputStream source, OBJModel target) throws IOException {
+		return parse(new InputStreamReader(source), target);
 	}
 
 	/**
